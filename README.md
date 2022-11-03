@@ -1,6 +1,6 @@
 # Dev Container Templates: Self Authoring Guide
 
-> This repo provides a starting point and example for creating your own custom [dev container Templates](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md), hosted for free on GitHub Container Registry.  The example in this repository follows the [dev container Template distribution specification](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates-distribution.md).  
+> This repo provides a starting point and example for creating your own custom [Dev Container Templates](https://containers.dev/implementors/templates), hosted for free on GitHub Container Registry.  The example in this repository follows the [Dev Container Template distribution specification](https://containers.dev/implementors/templates-distribution/).  
 >
 > To provide feedback on the distribution spec, please leave a comment [on spec issue #71](https://github.com/devcontainers/spec/issues/71).
 
@@ -35,7 +35,7 @@ This repository contains a _collection_ of two Templates - `hello` and `color`. 
 
 ### Options
 
-All available options for a Template should be declared in the `devcontainer-template.json`. The syntax for the `options` property can be found in the [devcontainer Template json properties reference](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#devcontainer-templatejson-properties).
+All available options for a Template should be declared in the `devcontainer-template.json`. The syntax for the `options` property can be found in the [devcontainer Template json properties reference](https://containers.dev/implementors/templates#devcontainer-templatejson-properties).
 
 For example, the `color` Template provides three possible options (`red`, `gold`, `green`), where the default value is set to "red".
 
@@ -57,17 +57,17 @@ For example, the `color` Template provides three possible options (`red`, `gold`
 }
 ```
 
-An [implementing tool](https://containers.dev/supporting#tools) will use the `options` property from [the documented dev container Template properties](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#devcontainer-templatejson-properties) for customizing the Template. See [option resolution example](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#option-resolution-example) for details.
+An [implementing tool](https://containers.dev/supporting#tools) will use the `options` property from [the documented Dev Container Template properties](https://containers.dev/implementors/templates#devcontainer-templatejson-properties) for customizing the Template. See [option resolution example](https://containers.dev/implementors/templates#option-resolution-example) for details.
 
 ## Distributing Templates
 
 ### Versioning
 
-Templates are individually versioned by the `version` attribute in a Template's `devcontainer-template.json`. Templates are versioned according to the semver specification. More details can be found in [the dev container Template specification](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates-distribution.md#versioning).
+Templates are individually versioned by the `version` attribute in a Template's `devcontainer-template.json`. Templates are versioned according to the semver specification. More details can be found in [the Dev Container Template specification](https://containers.dev/implementors/templates-distribution/#versioning).
 
 ### Publishing
 
-> NOTE: The Distribution spec can be [found here](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates-distribution.md).  
+> NOTE: The Distribution spec can be [found here](https://containers.dev/implementors/templates-distribution/).  
 >
 > While any registry [implementing the OCI Distribution spec](https://github.com/opencontainers/distribution-spec) can be used, this template will leverage GHCR (GitHub Container Registry) as the backing registry.
 
@@ -102,7 +102,7 @@ If you'd like your Templates to appear in our [public index](https://containers.
      * This is the GitHub repo backing the [containers.dev](https://containers.dev/) spec site
 * Open a PR to modify the [collection-index.yml](https://github.com/devcontainers/devcontainers.github.io/blob/gh-pages/_data/collection-index.yml) file
 
-This index is from where [supporting tools](https://containers.dev/supporting) like [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and [GitHub Codespaces](https://github.com/templates/codespaces) surface Templates for their dev container creation configuration UI.
+This index is from where [supporting tools](https://containers.dev/supporting) like [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) and [GitHub Codespaces](https://github.com/templates/codespaces) surface Templates for their Dev Container Creation Configuration UI.
 
 ### Testing Templates
 
