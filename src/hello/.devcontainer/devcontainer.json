@@ -2,7 +2,7 @@
 	"name": "Hello, World",
 	"build": {
 		"dockerfile": "Dockerfile"
-	}
+	},
 
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	// "features": {},
@@ -11,7 +11,7 @@
 	// "forwardPorts": [],
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
+	"postCreateCommand": "echo ${templateOption:greeting} > /tmp/greeting.txt"
 
 	// 👇 Configure tool-specific properties.
 	// "customizations": {},
