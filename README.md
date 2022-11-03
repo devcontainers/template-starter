@@ -86,9 +86,9 @@ The provided GitHub Action will also publish a third "metadata" package with jus
 
 ### Marking Template Public
 
-Note that by default, GHCR packages are marked as `private`.  To stay within the free tier, Templates need to be marked as `public`.
+For your Template to be used, it currently needs to be available publicly. By default, OCI Artifacts in GHCR are marked as `private`. 
 
-This can be done by navigating to the Template's "package settings" page in GHCR, and setting the visibility to 'public`.  The URL may look something like:
+To make them public, navigate to the Template's "package settings" page in GHCR, and set the visibility to 'public`. 
 
 ```
 https://github.com/users/<owner>/packages/container/<repo>%2F<templateName>/settings
@@ -96,7 +96,7 @@ https://github.com/users/<owner>/packages/container/<repo>%2F<templateName>/sett
 
 ### Adding Templates to the Index
 
-If you'd like your Templates to appear in our [public index](https://containers.dev/templates) so that other community members can find them, you can do the following:
+Next you will need to add your Templates collection to our [public index](https://containers.dev/templates) so that other community members can find them. Just follow these steps once per collection you create:
 
 * Go to [github.com/devcontainers/devcontainers.github.io](github.com/devcontainers/devcontainers.github.io)
      * This is the GitHub repo backing the [containers.dev](https://containers.dev/) spec site
