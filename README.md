@@ -96,7 +96,7 @@ https://github.com/users/<owner>/packages/container/<repo>%2F<templateName>/sett
 
 ### Adding Templates to the Index
 
-If you'd like your Templates to appear in our [public index](https://containers.dev/templates) so that other community members can find them, you can do the following:
+Next you will need to add your Templates collection to our [public index](https://containers.dev/templates) so that other community members can find them. Just follow these steps once per collection you create:
 
 * Go to [github.com/devcontainers/devcontainers.github.io](github.com/devcontainers/devcontainers.github.io)
      * This is the GitHub repo backing the [containers.dev](https://containers.dev/) spec site
