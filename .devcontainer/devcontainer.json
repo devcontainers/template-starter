@@ -1,3 +1,4 @@
+// More info: https://containers.dev/implementors/json_reference/
 {
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
 	"features": {

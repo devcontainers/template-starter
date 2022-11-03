@@ -1,8 +1,8 @@
-# Dev Container Templates: Self Authoring Template
+# Dev Container Templates: Self Authoring Guide
 
 > This repo provides a starting point and example for creating your own custom [dev container Templates](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md), hosted for free on GitHub Container Registry.  The example in this repository follows the [dev container Template distribution specification](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates-distribution.md).  
 >
-> To provide feedback to the specification, please leave a comment [on spec issue #71](https://github.com/devcontainers/spec/issues/71).
+> To provide feedback on the distribution spec, please leave a comment [on spec issue #71](https://github.com/devcontainers/spec/issues/71).
 
 ## Repo and Template Structure
 
@@ -37,7 +37,7 @@ This repository contains a _collection_ of two Templates - `hello` and `color`. 
 
 All available options for a Template should be declared in the `devcontainer-template.json`. The syntax for the `options` property can be found in the [devcontainer Template json properties reference](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#devcontainer-templatejson-properties).
 
-For example, the `color` template provides three possible options (`red`, `gold`, `green`) where the default value is set to "red".
+For example, the `color` Template provides three possible options (`red`, `gold`, `green`), where the default value is set to "red".
 
 ```jsonc
 {
@@ -57,7 +57,7 @@ For example, the `color` template provides three possible options (`red`, `gold`
 }
 ```
 
-An [implementing tool](https://containers.dev/supporting#tools) will use the `options` property from [the documented dev container Template properties](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#devcontainer-templatejson-properties) for customizing the template. See [option resolution example](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#option-resolution-example) for details.
+An [implementing tool](https://containers.dev/supporting#tools) will use the `options` property from [the documented dev container Template properties](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#devcontainer-templatejson-properties) for customizing the Template. See [option resolution example](https://github.com/devcontainers/spec/blob/main/proposals/devcontainer-templates.md#option-resolution-example) for details.
 
 ## Distributing Templates
 
