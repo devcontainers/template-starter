@@ -12,5 +12,6 @@
 			]
 		}
 	},
+	"remoteUser": "node",
 	"postCreateCommand": "npm install -g @devcontainers/cli"
 }
