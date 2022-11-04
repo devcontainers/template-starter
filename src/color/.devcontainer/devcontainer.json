@@ -8,7 +8,7 @@
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	"postCreateCommand": "echo '${templateOption:favorite}' > /usr/local/etc/color.txt"
+	"postCreateCommand": "echo '${templateOption:favorite}' > /tmp/color.txt"
 
 	// 👇 Configure tool-specific properties.
 	// "customizations": {},

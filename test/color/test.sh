@@ -4,7 +4,7 @@ source test-utils.sh
 
 # Template specific tests
 check "distro" lsb_release -c
-check "color" [ $(cat /usr/local/etc/color.txt | grep red) ]
+check "color" [ $(cat /tmp/color.txt | grep red) ]
 
 # Report result
 reportResults
