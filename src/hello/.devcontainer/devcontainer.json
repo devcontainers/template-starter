@@ -11,7 +11,7 @@
 	// "forwardPorts": [],
 
 	// 👇 Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "echo ${templateOption:greeting} > /usr/local/etc/greeting.txt"
+	"postCreateCommand": "cat /usr/local/etc/greeting.txt"
 
 	// 👇 Configure tool-specific properties.
 	// "customizations": {},
