@@ -27,6 +27,6 @@ jobs:
 
       - name: Smoke test for '${{ matrix.templates }}'
         id: smoke_test
-        uses: ./.github/actions/smoke-test
+        uses: ./.github/workflows/actions/smoke-test
         with:
           template: "${{ matrix.templates }}"
