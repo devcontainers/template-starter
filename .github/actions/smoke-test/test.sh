@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 TEMPLATE_ID="$1"
 set -e
 
