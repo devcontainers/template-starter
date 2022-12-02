@@ -2,7 +2,7 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:1": {}
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
 	"customizations": {
 		"vscode": {
