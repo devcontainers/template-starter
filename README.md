@@ -108,17 +108,12 @@ This index is from where [supporting tools](https://containers.dev/supporting) l
 
 This repo contains a GitHub Action [workflow](.github/workflows/test-pr.yaml) for testing the Templates. Similar to the [`devcontainers/templates`](https://github.com/devcontainers/templates) repo, this repository has a `test` folder.  Each Template has its own sub-folder, containing at least a `test.sh`.
 
-For running the tests locally, you would need to execute the following commands -
+For running the tests locally, execute the following command -
 
 ```
-    ./.github/actions/smoke-test/build.sh ${TEMPLATE-ID} 
-    ./.github/actions/smoke-test/test.sh ${TEMPLATE-ID} 
+    .github/workflows/smoke-test/test.sh ${TEMPLATE-ID}
 ```
 
 ### Updating Documentation
 
 This repo contains a GitHub Action [workflow](.github/workflows/release.yaml) that will automatically generate documentation (ie. `README.md`) for each Template. This file will be auto-generated from the `devcontainer-template.json` and `NOTES.md`.
-
-### Testing Templates locally
-
-Templates can be tested locally with [test.sh](./test.sh), it builds the template and runs the tests provided by the [test folder](./test/). Example - `./test.sh color`
