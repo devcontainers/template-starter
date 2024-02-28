@@ -1,6 +1,6 @@
 {
     "id": "color",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "My Favorite Color",
     "description": "A Template to remind you of your favorite color",
     "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/color",
