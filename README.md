@@ -100,7 +100,7 @@ https://github.com/users/<owner>/packages/container/<repo>%2F<templateName>/sett
 
 Next you will need to add your Templates collection to our [public index](https://containers.dev/templates) so that other community members can find them. Just follow these steps once per collection you create:
 
-* Go to [github.com/devcontainers/devcontainers.github.io](github.com/devcontainers/devcontainers.github.io)
+* Go to [github.com/devcontainers/devcontainers.github.io](https://github.com/devcontainers/devcontainers.github.io)
      * This is the GitHub repo backing the [containers.dev](https://containers.dev/) spec site
 * Open a PR to modify the [collection-index.yml](https://github.com/devcontainers/devcontainers.github.io/blob/gh-pages/_data/collection-index.yml) file
 
