@@ -8,7 +8,7 @@ jobs:
     outputs:
       templates: ${{ steps.filter.outputs.changes }}
     steps:
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v3
         id: filter
         with:
           filters: |
@@ -19,6 +19,7 @@ jobs:
     needs: [detect-changes]
     runs-on: ubuntu-latest
     continue-on-error: true
+    if: ${{ needs.detect-changes.outputs.templates != '[]' && needs.detect-changes.outputs.templates != ''}    
     strategy:
       matrix:
         templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
