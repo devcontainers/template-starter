@@ -1,6 +1,6 @@
 {
-	"name": "Favorite color",
-	"image": "mcr.microsoft.com/devcontainers/base:${templateOption:imageVariant}",
+	"name": "SliDesk",
+	"image": "wilda/jekyll:1.0.0",
 
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	// "features": {},
@@ -8,7 +8,7 @@
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	"postCreateCommand": "echo '${templateOption:favorite}' > /tmp/color.txt"
+	"postCreateCommand": "slidesk --version"
 
 	// 👇 Configure tool-specific properties.
 	// "customizations": {},

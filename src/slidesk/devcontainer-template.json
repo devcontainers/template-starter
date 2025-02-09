@@ -1,0 +1,22 @@
+{
+    "id": "slidesk",
+    "version": "1.0.0",
+    "name": "SliDesk with Dev Containers",
+    "description": "A Template to have SliDesk in your Dev Containers",
+    "documentationURL": "https://github.com/philippart-s/template-slidesk/tree/main/src/slidesk",
+    "licenseURL": "https://github.com/philippart-s/template-slidesk/blob/main/LICENSE",
+    "options": {
+        "imageVariant": {
+            "type": "string",
+            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
+            "proposals": [
+                "bullseye",
+                "buster"
+            ],
+            "default": "bullseye"
+        }
+    },
+    "platforms": [
+        "Any"
+    ]
+}
