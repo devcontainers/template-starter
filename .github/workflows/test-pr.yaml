@@ -23,7 +23,7 @@ jobs:
       matrix:
         templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Smoke test for '${{ matrix.templates }}'
         id: smoke_test
