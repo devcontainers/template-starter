@@ -1,7 +1,7 @@
 
 # Hello, World (hello)
 
-A hello world Template - Test CI
+A hello world Template
 
 ## Options
 
