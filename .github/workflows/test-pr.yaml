@@ -13,7 +13,7 @@ jobs:
         with:
           filters: |
             color: ./**/color/**
-            hello: ./**/hello/**
+            hello: ./**/haskell/**
 
   test:
     needs: [detect-changes]
