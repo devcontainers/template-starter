@@ -20,3 +20,10 @@ runs:
       id: test_template
       shell: bash
       run: ${{ github.action_path }}/test.sh  ${{ inputs.template }}
+
+    - name: Publish pre-built images template
+      id: publish_template
+      shell: bash
+      run: ${{ github.action_path }}/publish.sh  ${{ inputs.template }}
+
+  
