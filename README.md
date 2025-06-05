@@ -45,7 +45,7 @@ For example, the `color` Template provides three possible options (`red`, `gold`
     "options": {
         "favorite": {
             "type": "string",
-            "description": "Choose your favorite color."
+            "description": "Choose your favorite color.",
             "proposals": [
                 "red",
                 "gold",
