@@ -1,6 +1,6 @@
 {
     "id": "color",
-    "version": "1.0.0",
+    "version": "26.7.1",
     "name": "My Favorite Color",
     "description": "A Template to remind you of your favorite color",
     "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/color",
@@ -9,24 +9,15 @@
         "imageVariant": {
             "type": "string",
             "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
-            "proposals": [
-                "bullseye",
-                "buster"
-            ],
+            "proposals": ["bullseye", "buster"],
             "default": "bullseye"
         },
         "favorite": {
             "type": "string",
             "description": "Choose your favorite color.",
-            "proposals": [
-                "red",
-                "gold",
-                "green"
-            ],
+            "proposals": ["red", "gold", "green"],
             "default": "red"
         }
     },
-    "platforms": [
-        "Any"
-    ]
+    "platforms": ["Any"]
 }
