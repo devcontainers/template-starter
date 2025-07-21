@@ -3,29 +3,48 @@ on:
     pull_request:
 
 jobs:
-    detect-changes:
+    detect-templates:
         runs-on: ubuntu-latest
         outputs:
-            templates: ${{ steps.filter.outputs.changes }}
+            templates: ${{ steps.set-matrix.outputs.templates }}
         steps:
-            - uses: dorny/paths-filter@v2
-              id: filter
-              with:
-                  filters: |
-                      templates: src/*
+            - uses: actions/checkout@v3
+
+            - name: Find template directories
+              id: set-matrix
+              run: |
+                  # Find all directories in src/ - these are our templates
+                  templates=$(find src -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort)
+
+                  # Convert to JSON array format for matrix
+                  json_array="["
+                  first=true
+                  for template in $templates; do
+                    if [ "$first" = true ]; then
+                      json_array="$json_array\"$template\""
+                      first=false
+                    else
+                      json_array="$json_array,\"$template\""
+                    fi
+                  done
+                  json_array="$json_array]"
+
+                  echo "Found templates: $json_array"
+                  echo "templates=$json_array" >> $GITHUB_OUTPUT
 
     test:
-        needs: [detect-changes]
+        needs: [detect-templates]
+        if: ${{ fromJSON(needs.detect-templates.outputs.templates)[0] != null }}
         runs-on: ubuntu-latest
         continue-on-error: true
         strategy:
             matrix:
-                templates: ${{ fromJSON(needs.detect-changes.outputs.templates) }}
+                template: ${{ fromJSON(needs.detect-templates.outputs.templates) }}
         steps:
             - uses: actions/checkout@v3
 
-            - name: Smoke test for '${{ matrix.templates }}'
+            - name: Smoke test for '${{ matrix.template }}'
               id: smoke_test
               uses: ./.github/actions/smoke-test
               with:
-                  template: "${{ matrix.templates }}"
+                  template: "${{ matrix.template }}"
