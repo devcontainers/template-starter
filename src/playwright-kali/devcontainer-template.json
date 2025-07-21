@@ -1,0 +1,46 @@
+{
+    "id": "playwright-kali",
+    "version": "1.0.0",
+    "name": "Playwright Testing with Kali Linux",
+    "description": "A comprehensive development environment for web testing and security research using Playwright on Kali Linux",
+    "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/playwright-kali",
+    "licenseURL": "https://github.com/devcontainers/template-starter/blob/main/LICENSE",
+    "options": {
+        "nodeVersion": {
+            "type": "string",
+            "description": "Node.js version for Playwright development",
+            "proposals": [
+                "18",
+                "20",
+                "latest"
+            ],
+            "default": "20"
+        },
+        "playwrightBrowsers": {
+            "type": "string",
+            "description": "Playwright browsers to install",
+            "proposals": [
+                "all",
+                "chromium",
+                "firefox",
+                "webkit",
+                "chromium-firefox"
+            ],
+            "default": "all"
+        },
+        "includeSecurityTools": {
+            "type": "boolean",
+            "description": "Include additional security research tools",
+            "default": true
+        },
+        "includeNetworkTools": {
+            "type": "boolean",
+            "description": "Include network analysis tools (nmap, wireshark, etc.)",
+            "default": true
+        }
+    },
+    "platforms": [
+        "linux/amd64",
+        "linux/arm64"
+    ]
+}

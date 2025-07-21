@@ -1,0 +1,76 @@
+{
+    "name": "Playwright Testing with Kali Linux",
+    "image": "kalilinux/kali-rolling",
+
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "nodeGypDependencies": true,
+            "version": "${templateOption:nodeVersion}"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.11"
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-playwright.playwright",
+                "ms-vscode.vscode-typescript-next",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "ms-vscode.test-adapter-converter",
+                "hbenl.vscode-test-explorer",
+                "usernamehw.errorlens",
+                "christian-kohler.path-intellisense",
+                "formulahendry.auto-rename-tag",
+                "ms-vscode.vscode-json",
+                "redhat.vscode-yaml",
+                "humao.rest-client",
+                "ms-vscode.hexdump",
+                "ms-vscode.vscode-serial-monitor"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "typescript.preferences.quoteStyle": "single",
+                "javascript.preferences.quoteStyle": "single",
+                "prettier.singleQuote": true,
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.fixAll": true
+                }
+            }
+        }
+    },
+
+    "forwardPorts": [3000, 8080, 9000],
+
+    "postCreateCommand": ".devcontainer/setup.sh",
+
+    "containerEnv": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/opt/playwright-browsers",
+        "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "false",
+        "DEBIAN_FRONTEND": "noninteractive"
+    },
+
+    "capAdd": ["NET_ADMIN", "NET_RAW", "SYS_ADMIN"],
+    "securityOpt": ["seccomp:unconfined"],
+
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+        "source=playwright-browsers,target=/opt/playwright-browsers,type=volume"
+    ],
+
+    "remoteUser": "root",
+
+    "overrideCommand": false,
+
+    "initializeCommand": "echo 'Initializing Playwright + Kali Linux environment...'",
+    "onCreateCommand": "echo 'Container created successfully'",
+    "updateContentCommand": "echo 'Updating container content...'",
+    "postStartCommand": "echo 'Container started and ready for security research and testing!'"
+}
