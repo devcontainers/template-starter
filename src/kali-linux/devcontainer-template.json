@@ -3,6 +3,6 @@
     "version": "1.0.0",
     "name": "Kali Linux",
     "description": "A basic Kali Linux development environment that can be extended with security tools",
-    "documentationURL": "https://github.com/public-rant/template-starter/tree/main/src/playwright-kali",
+    "documentationURL": "https://github.com/public-rant/template-starter/tree/main/src/kali-linux",
     "options": {}
 }
